@@ -103,7 +103,7 @@ function getSelectedText() {
  * sentiment and 1 is highly positive.
  */
 function retrieveSentiment(line) {
-    var apiKey = "AIzaSyDwHY8awOI3fGK1FRNaiffu9fLe86p5xMw";
+    var apiKey = "YOUR_NATURAL_LANGUAGE_API_KEY";
     var apiEndpoint =
         'https://language.googleapis.com/v1/documents:analyzeSentiment?key=' +
         apiKey;
