@@ -1,0 +1,8 @@
+{
+    "name": "sentiment-api-example",
+    "version": "0.0.1",
+    "dependencies": {
+        "@google-cloud/storage": "1.6.0",
+        "@google-cloud/language": "1.2.0"
+    }
+}

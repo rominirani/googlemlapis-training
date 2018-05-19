@@ -1,0 +1,24 @@
+gcloud -q beta functions delete helloGCSGeneric
+gcloud -q beta functions delete helloGreeting
+gcloud -q beta functions delete processFile
+gcloud -q beta functions delete subscribe
+gcloud -q beta functions delete analyzeImage
+gcloud -q beta functions delete analyzeSpeech
+gcloud -q beta functions delete analyzeSentimentInFile
+gcloud -q beta functions delete classifyTextInFile
+
+
+gcloud beta pubsub topics delete pubsubtopic2
+gsutil rm -r gs://gcs-function-bucket2
+gsutil rm -r gs://gcs-function-translation-bucket1
+gsutil rm -r gs://gcs-function-translation-bucket1_es
+gsutil rm -r gs://my-social-site-bucket
+gsutil rm -r gs://green-signal-bucket
+gsutil rm -r gs://red-signal-bucket
+gsutil rm -r gs://my-speech-files-bucket
+gsutil rm -r gs://my-sa-files-bucket
+gsutil rm -r gs://my-classify-files-bucket
+
+
+
+

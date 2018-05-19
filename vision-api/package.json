@@ -1,0 +1,8 @@
+{
+    "name": "vision-api-example",
+    "version": "0.0.1",
+    "dependencies": {
+        "@google-cloud/storage": "1.6.0",
+        "@google-cloud/vision": "0.19.0"
+    }
+}

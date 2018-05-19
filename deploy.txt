@@ -1,0 +1,33 @@
+cd hellogreeting-http/
+gcloud beta functions deploy helloGreeting --trigger-http
+cd ..
+cd hello-pubsub
+gcloud beta pubsub topics create pubsubtopic2
+gcloud beta functions deploy subscribe --trigger-resource pubsubtopic2 --trigger-event google.pubsub.topic.publish
+cd ..
+cd hello-gcs
+gsutil mb gs://gcs-function-bucket2
+gcloud beta functions deploy helloGCSGeneric --trigger-resource gs://gcs-function-bucket2 --trigger-event google.storage.object.finalize 
+cd ..
+cd translation-process
+gsutil mb gs://gcs-function-translation-bucket1
+gsutil mb gs://gcs-function-translation-bucket1_es
+gcloud beta functions deploy processFile --trigger-resource gs://gcs-function-translation-bucket1 --trigger-event google.storage.object.finalize 
+cd ..
+cd vision-api
+gsutil mb gs://my-social-site-bucket
+gsutil mb gs://green-signal-bucket
+gsutil mb gs://red-signal-bucket
+gcloud beta functions deploy analyzeImage --trigger-resource gs://my-social-site-bucket --trigger-event google.storage.object.finalize 
+cd ..
+cd speech-api
+gsutil mb gs://my-speech-files-bucket
+gsutil mb gs://my-transcription-files-bucket
+gcloud beta functions deploy analyzeSpeech --trigger-resource gs://my-speech-files-bucket --trigger-event google.storage.object.finalize 
+cd ..
+cd sentiment-api
+gsutil mb gs://my-sa-files-bucket
+gcloud beta functions deploy analyzeSentimentInFile --trigger-resource gs://my-sa-files-bucket --trigger-event google.storage.object.finalize 
+gsutil mb gs://my-classify-files-bucket
+gcloud beta functions deploy classifyTextInFile --trigger-resource gs://my-classify-files-bucket --trigger-event google.storage.object.finalize 
+
