@@ -12,6 +12,7 @@ The projects are:
  - `vision-api` : Cloud Function with GCS Trigger. This function processes an image file. If the image contains "Violence" then it is moved to a red bucket. If it does not contain violence, it is moved to a green bucket.
  - `sentiment-api` : Cloud Function with GCS Trigger. This project has two cloud functions. One of them classifies the text into 100s of categories that the Natural Language API can do. The other cloud function analyzes the sentiment for each sentencec in the file and logs them into the console.
  - `translation-api` : Cloud Function with GCS Trigger. This function processes a file uploaded in English Text. It uses the Translation API to convert the English Text to Spanish. It writes the Spanish translation into files in a target bucket.
+ - `localapps` : Node.js applications that you can run locally on a machine that has Node and NPM tools setup. Refer to the README in that directory for more details on how to run the applications locally. 
  
 You can use Google Cloud Shell here to clone the repository. Simply click on the "Open in Cloud Shell" button below. This will clone the repository in your Google Cloud Account's Cloud Shell.
  
