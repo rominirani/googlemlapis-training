@@ -1,0 +1,16 @@
+{
+    "name": "local-mlapis-example",
+    "version": "0.0.1",
+    "description": "Sample Node.js code to demonstrate Google Cloud Machine Learning APIs",
+    "repository": "https://www.github.com/rominirani/googlemlapis-training",
+    "license": "Apache-2.0",
+    "dependencies": {
+        "@google-cloud/storage": "1.6.0",
+        "@google-cloud/vision": "0.19.0",
+        "@google-cloud/translate": "1.1.0",
+        "@google-cloud/speech": "1.5.0",
+        "@google-cloud/language": "1.2.0",
+        "@google-cloud/text-to-speech": "0.1.0",
+        "@google-cloud/video-intelligence": "1.2.0"
+    }
+}
