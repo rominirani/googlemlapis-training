@@ -21,7 +21,7 @@ exports.analyzeSentimentInFile = function (event, callback) {
         type: 'PLAIN_TEXT',
     };
 
-    client
+    language
         .analyzeSentiment({
             document: document
         })
